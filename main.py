@@ -12,9 +12,9 @@ def main():
     for i in range(10):
         with open(rf"{path}/commit.json", "w") as f:
             f.write(json.dumps({"commit": i}))
-            os.system("git add .")
-            os.system('git commit -m " This is a automated commit."')
-            os.system("git push")
+        os.system("git add .")
+        os.system('git commit -m " This is a automated commit."')
+        os.system("git push")
 
 
 if __name__ == "__main__":
