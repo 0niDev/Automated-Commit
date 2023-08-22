@@ -1,3 +1,4 @@
+import json
 import os
 
 
@@ -9,8 +10,8 @@ def main():
     else:
         os.mkdir(path)
     for i in range(10):
-        with open(rf"{path}/commit.txt", "w") as f:
-            f.write(str(i))
+        with open(rf"{path}/commit.json", "w") as f:
+            f.write(json.dumps({"commit": i}))
             os.system("git add .")
             os.system('git commit -m " This is a automated commit."')
             os.system("git push")
