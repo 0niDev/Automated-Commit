@@ -10,7 +10,7 @@ def main():
     else:
         os.mkdir(path)
     for i in range(10):
-        with open(rf"{path}/commit.json", "w") as f:
+        with open(rf"{path}/commit.txt", "w") as f:
             f.write('"commit": {i}')
             f.close()
         os.system("git add .")
