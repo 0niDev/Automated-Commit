@@ -9,7 +9,7 @@ def main():
         pass
     else:
         os.mkdir(path)
-    for i in range(10):
+    for i in range(100):
         with open(rf"{path}/commit.txt", "w") as f:
             f.write(f'"commit": {i}')
             f.close()
